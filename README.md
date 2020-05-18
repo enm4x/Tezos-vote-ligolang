@@ -3,6 +3,7 @@
 you will find : 
 
 - A vote.ligo file in written with ligolang
+- A vote_test.py file wich contains all the tests for each entry point
 - a list of all the commands you need in order to compile/test/deploy the given contracts
 
 ---
