@@ -87,7 +87,7 @@ $ ligo dry-run --source="tz1Yzb54tZxbDDEePxKPPCCV4H2TiN667row" vote.ligo main 'V
 
 
 
-### Break function : 
+### Pause function : 
 
 
 
