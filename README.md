@@ -155,3 +155,31 @@ make sure you're in you test file folder then  :
 
 pytest vote_test.py
 ```
+
+## Tezos-client 
+
+### Originate your contract on chain
+
+With the output of the command compile-storage you're able tooriginate your smart contract on chain
+
+```shell
+vote.tz :
+tezos-client originate contract vote transferring 1 from account running ../path/vote.tz --init '(Pair (Pair (Pair 0 "no result") (Pair True {})) 0)' --burn-cap 0.667
+
+vote_alt.tz : 
+tezos-client originate contract vote transferring 1 from account running ../path/vote.tz --init '(Pair (Pair (Pair 0 "tz1Yzb54tZxbDDEePxKPPCCV4H2TiN667row" ) (Pair 0 "no result" True)) (Pair {} 0))' --burn-cap 0.667
+```
+
+### Get your contract storage 
+
+You will need a tezos node, or a proxy to a tezos node.
+
+```shell
+tezos-client get contract storage for <mycontract>
+```
+
+### List all your contracts 
+
+```shell
+tezos-client list known contracts
+```
