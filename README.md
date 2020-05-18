@@ -87,6 +87,8 @@ $ ligo dry-run --source="tz1Yzb54tZxbDDEePxKPPCCV4H2TiN667row" vote.ligo main 'V
 
 
 
+
+
 ### Pause function : 
 
 
@@ -112,6 +114,8 @@ $ ligo dry-run --source="tz1Yzb54tZxbDDEePxKPPCCV4H2TiN667row" vote.ligo main 'B
 ```shell
 $ ligo dry-run --source="tz1Yzb54tZxbDDEePxKPPCCV4H2TiN667row" vote.ligo main 'Break("False")' 'record[status = True; yes = 0n; no = 0n; voters = (Set.empty : set(address)); res = "no result"]'
 ```
+
+
 
 
 
