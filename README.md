@@ -50,7 +50,7 @@ $ ligo dry-run --source="tz1gjaF81ZRRvdzjobyfVNsAeSC6PScjfQwN" vote.ligo main 'V
 - Non-owner account : vote no -> [ Success, +1 no ]
 
 ```shell
-$ ligo dry-run --source="tz1gjaF81ZRRvdzjobyfVNsAeSC6PScjfQwN" vote.ligo main 'Vote(1n)' 'record[status = True; yes = 0n; no = 0n; voters = (Set.empty : set(address)); res = "no result"]'
+$ ligo dry-run --source="tz1gjaF81ZRRvdzjobyfVNsAeSC6PScjfQwN" vote.ligo main 'Vote(2n)' 'record[status = True; yes = 0n; no = 0n; voters = (Set.empty : set(address)); res = "no result"]'
 ```
 
 
