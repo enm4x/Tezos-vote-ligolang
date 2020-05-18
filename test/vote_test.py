@@ -20,9 +20,7 @@ class TestContractTest(TestCase):
     def test_vote_as_user_yes(self):
         alice = "tz1gjaF81ZRRvdzjobyfVNsAeSC6PScjfQwN"
         res = 1
-        result = self.test.vote(
-            1
-        ).result(
+        result = self.test.vote(1).result(
             storage={
                 "status": True,
                 "yes": 0,
@@ -37,9 +35,7 @@ class TestContractTest(TestCase):
     def test_vote_as_user_no(self):
         alice = "tz1gjaF81ZRRvdzjobyfVNsAeSC6PScjfQwN"
         res = 1
-        result = self.test.vote(
-            2
-        ).result(
+        result = self.test.vote(2).result(
             storage={
                 "status": True,
                 "yes": 0,
@@ -54,9 +50,7 @@ class TestContractTest(TestCase):
     def test_vote_fail_because_owner(self):
         owner = "tz1Yzb54tZxbDDEePxKPPCCV4H2TiN667row"
         with self.assertRaises(MichelsonRuntimeError):
-            self.test.vote(
-                1
-            ).result(
+            self.test.vote(1).result(
                 storage={
                     "status": True,
                     "yes": 0,
