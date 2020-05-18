@@ -11,22 +11,20 @@ you will find :
 
 input : 
 ```shell
-$ ligo compile-contract vote.ligo main
+$ ligo compile-contract vote.ligo main > vote.tz
 ```
-
-output : 
-```
-michelson code
-```
-
-
 
 ---
 
-## compile storage 
+## Compile storage 
 
 ```shell
-$ ligo compile-storage vote.ligo main 'record[status = True; yes = 0n; no = 0n; voters = (Set.empty : set(address)); res = "no result"]'
+vote.ligo :
+ligo compile-storage vote.ligo main 'record[status = True; yes = 0n; no = 0n; voters = (Set.empty : set(address)); res = "no result"]'
+
+vote_alt.ligo :
+ligo compile-storage vote.ligo main 'record[owner = ("tz1Yzb54tZxbDDEePxKPPCCV4H2TiN667row" : address); status = True; yes = 0n; no = 0n; voters = (Set.empty : set(address)); res = "no result"]'
+
 ```
 
 
@@ -142,5 +140,14 @@ $ ligo dry-run --source="tz1Yzb54tZxbDDEePxKPPCCV4H2TiN667row" vote.ligo main 'R
 - Owner account, vote running -> [Fail]
 
 ```shell
-$ ligo dry-run --source="tz1Yzb54tZxbDDEePxKPPCCV4H2TiN667row" vote.ligo main 'Reset' 'record[status = True; yes = 0n; no = 0n; voters = (Set.empty : set(address)); res = "no result"]'
+ligo dry-run --source="tz1Yzb54tZxbDDEePxKPPCCV4H2TiN667row" vote.ligo main 'Reset' 'record[status = True; yes = 0n; no = 0n; voters = (Set.empty : set(address)); res = "no result"]'
+```
+
+## Run tests with pytest & pyligo
+
+You must install pytest and pytest-ligo first then you can run the command below 
+
+```shell
+make sure you're in you test file folder then 
+pytest vote_test.py
 ```
